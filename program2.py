@@ -9,7 +9,6 @@ class Solution:
             if msg_idx < len(message) and pat_idx < len(decoder_key) and \(decoder_key[pat_idx] == '?' or decoder_key[pat_idx] == message[msg_idx]):
                 return match_helper(msg_idx + 1, pat_idx + 1)
             return False
-
         return match_helper(0, 0)
 
 if __name__ == "__main__":
