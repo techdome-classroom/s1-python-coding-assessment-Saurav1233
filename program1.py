@@ -7,9 +7,7 @@ class Solution:
 
         rows, cols = len(grid), len(grid[0])
         visited = [[False for _ in range(cols)] for _ in range(rows)]
-
         def dfs(r, c):
-            
             if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == 'W' or visited[r][c]:
                 return
             visited[r][c] = True
