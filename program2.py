@@ -6,8 +6,7 @@ class Solution:
             if pat_idx < len(decoder_key) and decoder_key[pat_idx] == '*':
                 return (match_helper(msg_idx, pat_idx + 1) or
                         (msg_idx < len(message) and match_helper(msg_idx + 1, pat_idx)))
-            if msg_idx < len(message) and pat_idx < len(decoder_key) and \
-               (decoder_key[pat_idx] == '?' or decoder_key[pat_idx] == message[msg_idx]):
+            if msg_idx < len(message) and pat_idx < len(decoder_key) and \(decoder_key[pat_idx] == '?' or decoder_key[pat_idx] == message[msg_idx]):
                 return match_helper(msg_idx + 1, pat_idx + 1)
             return False
 
